@@ -1,0 +1,51 @@
+.body{
+    position: relative;
+    display: grid;
+    grid-template: repeat(8, 50px) / repeat(4, 50px);
+      background-color: black;
+    width: 250px;
+    height: 400px;
+    justify-content: center;
+    grid-gap: 5px 5px;
+    border-radius: 10px;
+  }
+  #res{
+   overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .btnn{
+    color: white;
+    background-color: black;
+  }
+  .btn, .point, .plus, .minus{
+    background-color: #575758;
+    color: white;
+  }
+  .screen{
+    grid-area: 2 / 1 / span 1 / span 4;
+    background-color: rgb(158, 154, 99);
+    border-radius: 10px;
+    position: relative;
+   
+  }
+  .screen > span{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    
+  }
+  .equal{
+    grid-area:  span 2 / span 1;
+    background-color: #eb5e23;
+  }
+  
+  .blank {
+    grid-area: 1 / 1 / span 1 / span 4;
+    color: white;
+    font-size: 20px;
+    margin-top: 7px;
+  }
+  .zero{
+    grid-area: 7 / 1 / span 1 / span 2;
+  }
