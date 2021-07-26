@@ -1,6 +1,11 @@
-# ***Ride-My-Way - Drivers & Passenger App(Backend)*** #
-**simple Driver - Passenger app created with react.js and node.js**
+# ***CALCULATOR FOR DIFFERENT NUMBER BASES*** #
 
 ## Table of Content ##
-- api for signup
+- Addition of number in different base 
+- subtraction of number in different base 
+- Multiplication of number in different base 
+- Division of number in different base 
+- Conversion from one base to another
+
+
 
