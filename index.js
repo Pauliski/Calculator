@@ -55,7 +55,9 @@ function func(event){
                document.getElementById("res").innerHTML = +finalResult
                baseTwoValues = []
             }    
-            } 
+            }
+    if(name==='.') document.getElementById("res").innerHTML += name
+   
     if(name === 'c'){
       for(let i = 0; i<allButton.length; i++){
         allButton[i].classList.remove('points')
@@ -63,10 +65,15 @@ function func(event){
         document.getElementById("res").innerHTML = ''
     } 
     else if(name === '+' || name === '-' || name === '/' || name === '*'){ 
+      let scrlen = document.getElementById("res").innerHTML.trim().length
+      if(name === document.getElementById("res").innerHTML.trim()[scrlen -1]){
+        return
+      }
         document.getElementById("res").innerHTML = `${document.getElementById("res").innerHTML} ${document.getElementById(id).innerHTML} `
        srcVal = `${document.getElementById("res").innerHTML}`
          let val = srcVal.split(' ')
           result.push(val)
+          
            srcVal = ''
         screen += document.getElementById(id).innerHTML 
     } 
