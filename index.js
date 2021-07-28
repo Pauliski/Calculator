@@ -56,7 +56,9 @@ function func(event){
                baseTwoValues = []
             }    
             }
-    if(name==='.') document.getElementById("res").innerHTML += name
+    if(name==='.'){
+       document.getElementById("res").innerHTML += name
+    }
    
     if(name === 'c'){
       for(let i = 0; i<allButton.length; i++){
@@ -110,12 +112,17 @@ function func(event){
           
           
           let valToInt = result[i]
-         
+          if([...valToInt].includes('.') && modal === 10){
+          let num = parseInt(valToInt, modal)
+           baseTwoValues.push(valToInt)
+          }else{
           let num = parseInt(valToInt, modal)
           result.splice(i, 1, num.toString())
            baseTwoValues.push(num)
-           
+          }
+         
         }
+        
       let sumInBaseTen = eval(result.join().replace(/,/g, ''))
            let finalResult = sumInBaseTen.toString(modal)
            document.getElementById("res").innerHTML = +finalResult
